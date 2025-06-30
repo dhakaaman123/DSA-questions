@@ -11,7 +11,6 @@ public class reverseString{
             String s = sc.nextLine();
             str.add(s);
 
-
         }
         reverseString rs = new reverseString();
         rs.reverseString((str));
