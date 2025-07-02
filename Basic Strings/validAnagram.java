@@ -4,11 +4,19 @@ public class validAnagram {
         if(s.length() != t.length()){
             return false;
         }
-        char[] sArray = s.toCharArray();
-        char[] tArray = t.toCharArray();
-        Arrays.sort(sArray);
-        Arrays.sort(tArray);
-        return Arrays.equals(sArray,tArray);
+        int [] count  = new int[26];
+        for(char c: s.toCharArray()){
+            count[c -'a']++;
+        }
+        for(char c:t.toCharArray()){
+            count[c -'a']--;
+        }
+        for(int i:count){
+            if(i !=0){
+                return false;
+            }
+        }
+        return true;
     }
     public static void main(String[] args){
         validAnagram va = new validAnagram();
