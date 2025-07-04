@@ -42,5 +42,7 @@ public class sortCharFreq {
         List<Character> result = scf.frequencySort(s);
         System.out.println("Characters sorted by frequency: " + result);
     }
+
+    
     
 }
